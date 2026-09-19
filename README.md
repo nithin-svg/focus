@@ -72,6 +72,19 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
+## ☁️ Deploying to Vercel
+
+This repository includes a production-ready `vercel.json` and serverless API configuration.
+
+### Deploy in 1-Click via Vercel Dashboard
+1. Go to **[https://vercel.com/new](https://vercel.com/new)**.
+2. Select your repository: **`nithin-svg/focus`**.
+3. Leave **Root Directory** as `./` and click **Deploy**.
+
+Vercel will automatically build the React Vite frontend and deploy the FastAPI backend as serverless functions (`/api/*`).
+
+---
+
 ## 🔑 Demo Credentials
 - **Email**: `demo@focussystem.com`
 - **Phone**: `+91 98765 43210`
