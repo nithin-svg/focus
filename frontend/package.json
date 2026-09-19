@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rolldown/binding-win32-x64-msvc": "^1.2.9",
     "axios": "^1.6.8",
     "canvas-confetti": "^1.9.2",
     "clsx": "^2.1.0",
