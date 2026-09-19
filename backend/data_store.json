@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": "634d4d7b-4449-4195-9f2f-abc855b4bef6",
+      "full_name": "Rajesh Kumar",
+      "email": "demo@focussystem.com",
+      "phone_number": "+91 98765 43210",
+      "password_hash": "$2b$12$WOrQUNRcPFQAIGR9PRtdU.UO7MUJ1wdH1MS4LybH9I2vM3TsxCQt.",
+      "address": "42 Cyber Hub, DLF Phase 2",
+      "city": "Bengaluru",
+      "postal_code": "560100",
+      "created_at": "2026-09-20T00:38:19.022674"
+    }
+  ],
+  "warranties": [
+    {
+      "id": "WRN-E3F23A47",
+      "user_id": "634d4d7b-4449-4195-9f2f-abc855b4bef6",
+      "customer_name": "Rajesh Kumar",
+      "customer_email": "demo@focussystem.com",
+      "customer_phone": "+91 98765 43210",
+      "product_name": "500 VR Voltage stabilizer( Refrigerator)",
+      "product_category": "Refrigerator",
+      "serial_number": "FS-VS-500VR-9821",
+      "purchase_date": "2026-03-04",
+      "warranty_start_date": "2026-03-04",
+      "original_warranty_expiry": "2027-03-04",
+      "warranty_expiry_date": "2027-10-19",
+      "status": "Active",
+      "days_left": 394,
+      "last_extended_period": "1 Year",
+      "extension_history": [
+        {
+          "extension_id": "EXT-001",
+          "extended_on": "2026-03-04",
+          "period": "1 Year OEM",
+          "previous_expiry": "N/A",
+          "new_expiry": "2027-03-04",
+          "amount_paid": 0.0,
+          "payment_id": "OEM-REG-001"
+        },
+        {
+          "extension_id": "EXT-F32636",
+          "extended_on": "2026-09-20",
+          "period": "1 Year",
+          "previous_expiry": "2026-10-19",
+          "new_expiry": "2027-10-19",
+          "amount_paid": 889.13,
+          "payment_id": "pay_rzp_T66WC9N7K"
+        }
+      ],
+      "certificate_id": "CERT-VS500VR-9821-FS",
+      "created_at": "2026-03-04",
+      "updated_at": "2026-09-20T00:46:39.973398"
+    },
+    {
+      "id": "WRN-E59EB694",
+      "user_id": "634d4d7b-4449-4195-9f2f-abc855b4bef6",
+      "customer_name": "Rajesh Kumar",
+      "customer_email": "demo@focussystem.com",
+      "customer_phone": "+91 98765 43210",
+      "product_name": "55 inches voltage stabilizer(TV)",
+      "product_category": "TV",
+      "serial_number": "FS-VS-55TV-7734",
+      "purchase_date": "2025-10-08",
+      "warranty_start_date": "2025-10-08",
+      "original_warranty_expiry": "2026-10-08",
+      "warranty_expiry_date": "2026-10-08",
+      "status": "Expiring Soon",
+      "days_left": 18,
+      "last_extended_period": "Initial 1 Year",
+      "extension_history": [
+        {
+          "extension_id": "EXT-002",
+          "extended_on": "2025-10-08",
+          "period": "1 Year Standard",
+          "previous_expiry": "N/A",
+          "new_expiry": "2026-10-08",
+          "amount_paid": 0.0,
+          "payment_id": "TV-STAB-INIT"
+        }
+      ],
+      "certificate_id": "CERT-VS55TV-7734-FS",
+      "created_at": "2025-10-08",
+      "updated_at": "2025-10-08"
+    },
+    {
+      "id": "WRN-FA66817B",
+      "user_id": "634d4d7b-4449-4195-9f2f-abc855b4bef6",
+      "customer_name": "Rajesh Kumar",
+      "customer_email": "demo@focussystem.com",
+      "customer_phone": "+91 98765 43210",
+      "product_name": "65 inches voltage stabilizer(TV)",
+      "product_category": "TV",
+      "serial_number": "FS-VS-65TV-4491",
+      "purchase_date": "2025-05-08",
+      "warranty_start_date": "2025-05-08",
+      "original_warranty_expiry": "2026-05-08",
+      "warranty_expiry_date": "2027-05-08",
+      "status": "Active",
+      "days_left": 230,
+      "last_extended_period": "1 Year",
+      "extension_history": [
+        {
+          "extension_id": "EXT-003",
+          "extended_on": "2026-05-08",
+          "period": "1 Year",
+          "previous_expiry": "2026-05-08",
+          "new_expiry": "2027-05-08",
+          "amount_paid": 899.0,
+          "payment_id": "pay_StabExt_88219"
+        }
+      ],
+      "certificate_id": "CERT-VS65TV-4491-FS",
+      "created_at": "2025-05-08",
+      "updated_at": "2026-05-08"
+    },
+    {
+      "id": "WRN-B1B89007",
+      "user_id": "634d4d7b-4449-4195-9f2f-abc855b4bef6",
+      "customer_name": "Rajesh Kumar",
+      "customer_email": "demo@focussystem.com",
+      "customer_phone": "+91 98765 43210",
+      "product_name": "43 inches voltage stabilizer(TV)",
+      "product_category": "TV",
+      "serial_number": "FS-VS-43TV-1109",
+      "purchase_date": "2025-08-16",
+      "warranty_start_date": "2025-08-16",
+      "original_warranty_expiry": "2026-08-16",
+      "warranty_expiry_date": "2026-08-16",
+      "status": "Expired",
+      "days_left": -35,
+      "last_extended_period": "Initial 1 Year",
+      "extension_history": [],
+      "certificate_id": "CERT-VS43TV-1109-FS",
+      "created_at": "2025-08-16",
+      "updated_at": "2026-08-16"
+    }
+  ],
+  "payments": [
+    {
+      "payment_id": "pay_rzp_T66WC9N7K",
+      "user_id": "634d4d7b-4449-4195-9f2f-abc855b4bef6",
+      "warranty_id": "WRN-E3F23A47",
+      "amount": 889.13,
+      "currency": "INR",
+      "method": "UPI",
+      "status": "Success",
+      "created_at": "2026-09-20T00:46:39.979534"
+    }
+  ]
+}
