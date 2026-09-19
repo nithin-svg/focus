@@ -4,8 +4,16 @@ const getApiBaseUrl = () => {
   if (import.meta.env.VITE_API_URL) {
     return import.meta.env.VITE_API_URL;
   }
-  const hostname = (typeof window !== 'undefined' && window.location.hostname) ? window.location.hostname : 'localhost';
-  return `http://${hostname}:8000/api`;
+  if (typeof window !== 'undefined') {
+    // If running on local dev server (port 5173 or 3000), point to port 8000
+    if (window.location.port === '5173' || window.location.port === '3000') {
+      const hostname = window.location.hostname || 'localhost';
+      return `http://${hostname}:8000/api`;
+    }
+    // On Vercel / production, use same-origin relative /api
+    return '/api';
+  }
+  return 'http://localhost:8000/api';
 };
 
 const api = axios.create({
