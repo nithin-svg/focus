@@ -22,7 +22,13 @@ class Database:
         self.use_mongo = False
         self.mongo_client = None
         self.db = None
-        self.fallback_file = os.path.join(os.path.dirname(__file__), "data_store.json")
+        # On serverless platforms (e.g. Vercel), the application directory is read-only.
+        # Use /tmp directory if available or fallback to local directory.
+        if os.path.exists("/tmp") and os.access("/tmp", os.W_OK):
+            self.fallback_file = "/tmp/data_store.json"
+        else:
+            self.fallback_file = os.path.join(os.path.dirname(__file__), "data_store.json")
+
         self.memory_store: Dict[str, List[Dict[str, Any]]] = {
             "users": [],
             "warranties": [],
@@ -47,21 +53,34 @@ class Database:
         logger.info("Using local persistent storage engine.")
 
     def _load_fallback_file(self):
+        # First try loading from fallback_file
         if os.path.exists(self.fallback_file):
             try:
                 with open(self.fallback_file, "r", encoding="utf-8") as f:
                     self.memory_store = json.load(f)
+                    return
             except Exception as e:
-                logger.error(f"Error loading fallback data: {e}")
-        else:
-            self._save_fallback_file()
+                logger.error(f"Error loading fallback data from {self.fallback_file}: {e}")
+        
+        # Next try loading bundled local data_store.json if fallback_file was /tmp
+        local_data_file = os.path.join(os.path.dirname(__file__), "data_store.json")
+        if os.path.exists(local_data_file) and local_data_file != self.fallback_file:
+            try:
+                with open(local_data_file, "r", encoding="utf-8") as f:
+                    self.memory_store = json.load(f)
+                    return
+            except Exception as e:
+                logger.error(f"Error loading bundled data: {e}")
+
+        # Attempt to initialize fallback file
+        self._save_fallback_file()
 
     def _save_fallback_file(self):
         try:
             with open(self.fallback_file, "w", encoding="utf-8") as f:
                 json.dump(self.memory_store, f, indent=2, default=str)
         except Exception as e:
-            logger.error(f"Error saving fallback data: {e}")
+            logger.warning(f"Note: Could not write fallback store to {self.fallback_file}: {e}")
 
     # --- User operations ---
     async def find_user_by_email_or_phone(self, identifier: str) -> Optional[Dict[str, Any]]:
